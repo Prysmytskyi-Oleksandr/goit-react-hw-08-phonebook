@@ -5,7 +5,7 @@ import { fetchDeleteContact } from 'redux/contacts/contactsOperations';
 
 import styles from '../contactList.module.css';
 
-const ContactItem = ({ name, phone, nameId }) => {
+const ContactItem = ({ name, number, nameId }) => {
   const dispatch = useDispatch();
 
   const handleDeleteContact = id => {
@@ -16,7 +16,7 @@ const ContactItem = ({ name, phone, nameId }) => {
   return (
     <li className={styles.contact_item}>
       <p>
-        {name}: {phone}
+        {name}: {number}
       </p>
 
       <button

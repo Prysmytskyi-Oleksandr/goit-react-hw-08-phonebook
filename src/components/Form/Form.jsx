@@ -17,12 +17,12 @@ export const Form = () => {
   const onAddContact = data => {
     const name = data.name;
     if (contacts.find(contact => contact.name === name)) {
-      alert(`${data.name} is already in contacts`);
+      alert(`${name} is already in contacts`);
       return;
     }
 
-    const phone = data.number;
-    const action = fetchAddContact({ name, phone });
+    const number = data.number;
+    const action = fetchAddContact({ name, number });
     dispatch(action);
   };
 
