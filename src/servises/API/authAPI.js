@@ -22,3 +22,16 @@ export const login = async contactData => {
   setToken(data.token);
   return data;
 };
+
+export const getCurrent = async token => {
+  try {
+    setToken(token);
+    const { data } = await instance.get('/users/current');
+    return data;
+  } catch (error) {
+    setToken();
+    throw error;
+  }
+};
+
+

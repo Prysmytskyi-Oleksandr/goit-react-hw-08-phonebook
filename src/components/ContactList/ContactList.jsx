@@ -23,8 +23,8 @@ const ContactList = () => {
 
   return (
     <ol className={styles.list}>
-      {listContactsByFilter.map(({ id, name, phone }) => {
-        return <ContactItem key={id} name={name} phone={phone} nameId={id} />;
+      {listContactsByFilter.map(({ id, name, number }) => {
+        return <ContactItem key={id} name={name} number={number} nameId={id} />;
       })}
     </ol>
   );
