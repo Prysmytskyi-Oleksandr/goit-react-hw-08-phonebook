@@ -13,7 +13,6 @@ export const App = () => {
     <Suspense>
       <Routes>
         <Route path="/" element={<Layout />}>
-          {/* <Route element={<PublicRoute />}> */}
           <Route index element={<HomePage />} />
           <Route>
             <Route path="/register" element={<RegisterPage />} />
@@ -21,7 +20,6 @@ export const App = () => {
           </Route>
           <Route path="/contacts" element={<ContactsPage />} />
           <Route path="*" element={<HomePage />} />
-          {/* // <Route /> */}
         </Route>
       </Routes>
     </Suspense>

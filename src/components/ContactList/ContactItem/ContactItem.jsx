@@ -33,7 +33,7 @@ const ContactItem = ({ name, number, nameId }) => {
 ContactItem.propTypes = {
   nameId: PropTypes.string.isRequired,
   name: PropTypes.string.isRequired,
-  phone: PropTypes.string.isRequired,
+  number: PropTypes.string.isRequired,
 };
 
 export default ContactItem;
