@@ -1,0 +1,11 @@
+.page_form {
+  display: flex;
+  gap: 200px;
+  padding: 60px;
+}
+
+.filter_list {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}

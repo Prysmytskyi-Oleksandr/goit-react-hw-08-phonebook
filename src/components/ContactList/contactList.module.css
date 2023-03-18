@@ -1,12 +1,18 @@
 .list {
   width: 350px;
-  padding: 20px;
+  padding: 0px;
 }
 
 .contact_item {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.contact {
+  margin: 0px;
 }
 
 .button {

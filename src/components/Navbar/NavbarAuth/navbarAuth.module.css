@@ -1,0 +1,24 @@
+.wrapper {
+  display: flex;
+  gap: 10px;
+
+  align-items: center;
+}
+
+.link {
+  text-decoration: none;
+  color: black;
+  font-weight: 400;
+  font-size: 20px;
+}
+
+.link:hover,
+.link:focus {
+  color: blue;
+}
+
+.link:global(.active) {
+  color: rgb(219, 37, 37);
+  font-weight: 600;
+  font-size: 25px;
+}

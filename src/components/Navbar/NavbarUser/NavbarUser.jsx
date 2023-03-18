@@ -1,6 +1,9 @@
 import { useSelector, useDispatch } from 'react-redux';
+import { NavLink } from 'react-router-dom';
 import { getUser } from '../../../redux/auth/authSelectors';
 import { logout } from 'redux/auth/authOperations';
+
+import styles from './navbarUser.module.css';
 
 const NavbarUser = () => {
   const { name } = useSelector(getUser);
@@ -11,7 +14,10 @@ const NavbarUser = () => {
   };
   return (
     <div>
-      {name}, <button onClick={onLogout}>Logout</button>
+      <NavLink to="/contacts" className={styles.registered_name}>
+        {name}
+      </NavLink>
+      <button onClick={onLogout}>Logout</button>
     </div>
   );
 };

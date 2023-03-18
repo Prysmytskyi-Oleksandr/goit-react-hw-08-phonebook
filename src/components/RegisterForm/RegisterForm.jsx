@@ -4,6 +4,8 @@ import fields from './fields';
 import Button from 'servises/Button/Button';
 import { useState, useCallback } from 'react';
 
+import styles from './register.module.css';
+
 const RegisterForm = ({ onSubmit }) => {
   const [state, setState] = useState({ ...initialState });
 
@@ -21,12 +23,13 @@ const RegisterForm = ({ onSubmit }) => {
     event.preventDefault();
     onSubmit({ ...state });
     setState({ ...initialState });
+    event.target.reset();
   };
 
   const { name, email, password } = state;
 
   return (
-    <form onSubmit={handleSubmit}>
+    <form onSubmit={handleSubmit} className={styles.form}>
       <TextField value={name} onChange={handleChange} {...fields.name} />
       <TextField value={email} onChange={handleChange} {...fields.email} />
       <TextField

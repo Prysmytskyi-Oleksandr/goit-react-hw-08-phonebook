@@ -1,0 +1,11 @@
+.registered_name {
+  margin-right: 10px;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 20px;
+  color: blue;
+}
+.registered_name:hover,
+.registered_name:focus {
+  color: red;
+}

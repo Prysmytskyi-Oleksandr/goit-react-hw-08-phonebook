@@ -15,7 +15,7 @@ const ContactItem = ({ name, number, nameId }) => {
 
   return (
     <li className={styles.contact_item}>
-      <p>
+      <p className={styles.contact}>
         {name}: {number}
       </p>
 

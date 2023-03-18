@@ -4,6 +4,8 @@ import fields from './fields';
 import Button from 'servises/Button/Button';
 import { useState, useCallback } from 'react';
 
+import styles from './login.module.css';
+
 const LoginForm = ({ onSubmit }) => {
   const [state, setState] = useState({ ...initialState });
 
@@ -26,7 +28,7 @@ const LoginForm = ({ onSubmit }) => {
   const { email, password } = state;
 
   return (
-    <form onSubmit={handleSubmit}>
+    <form onSubmit={handleSubmit} className={styles.form}>
       <TextField value={email} onChange={handleChange} {...fields.email} />
       <TextField
         value={password}
